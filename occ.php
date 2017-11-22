@@ -8,6 +8,7 @@ class ConcreateSubject implements \SplSubject
     public function initObservers()
     {
         $this->Observers = new \SplObjectStorage();
+        print_r($this->Observers);
     }
 
     public function attach(\SplObserver $observer)

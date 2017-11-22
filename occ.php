@@ -2,13 +2,12 @@
 
 class ConcreateSubject implements \SplSubject
 {
-    private $Observers;
+    public $Observers;
     private $Data;
 
     public function initObservers()
     {
         $this->Observers = new \SplObjectStorage();
-        print_r($this->Observers);
     }
 
     public function attach(\SplObserver $observer)
@@ -63,4 +62,5 @@ $subject->attach($client1);
 $subject->attach($client2);
 $subject->attach($client3);
 
-$subject->notify();  // 发送消息
+print_r($subject->Observers);
+// $subject->notify();  // 发送消息

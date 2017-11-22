@@ -1,15 +1,6 @@
 <?php
 
 
-class ConcreateObserver implements \SplObserver
-{
-    public $aa = 11;
-    public function update(\SplSubject $subject)
-    {
-        echo $subject->getData(),'<br />';
-    }
-}
-
 class ConcreateSubject implements \SplSubject
 {
     public $Observers;
@@ -46,6 +37,14 @@ class ConcreateSubject implements \SplSubject
     public function setData($data)
     {
         $this->Data = $data;
+    }
+}
+
+class ConcreateObserver implements \SplObserver
+{
+    public function update(\SplSubject $subject)
+    {
+        echo $subject->getData(),'<br />';
     }
 }
 

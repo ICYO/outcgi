@@ -61,6 +61,7 @@ $subject->setData("第一条消息");
 // 注册客户端
 $subject->attach($client1);
 $subject->attach($client2);
+$subject->attach($client2);
 $subject->attach($client3);
 
 // print_r($subject->Observers);

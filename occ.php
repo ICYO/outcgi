@@ -3,6 +3,7 @@
 
 class ConcreateObserver implements \SplObserver
 {
+    public $aa = 11;
     public function update(\SplSubject $subject)
     {
         echo $subject->getData(),'<br />';
@@ -33,7 +34,8 @@ class ConcreateSubject implements \SplSubject
     {
         foreach($this->Observers as $objserver)
         {
-            $observer->update($this);
+            echo $objserver->aa;
+            // $observer->update($this);
         }
     }
 

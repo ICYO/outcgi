@@ -1,21 +1,21 @@
 <?php
 
-class ConcreateSubject implements SplSubject
+class ConcreateSubject implements \SplSubject
 {
     private $Observers;
     private $Data;
 
     public function setObservers()
     {
-        $this->Observers = new SplObjectStorage();
+        $this->Observers = new \SplObjectStorage();
     }
 
-    public function attach(SplObserver $observer)
+    public function attach(\SplObserver $observer)
     {
         $this->Observers->attach($observer);
     }
 
-    public function detach(SplObserver $observer)
+    public function detach(\SplObserver $observer)
     {
         $this->Observers->detach($observer);
     }
@@ -39,9 +39,9 @@ class ConcreateSubject implements SplSubject
     }
 }
 
-class ConcreateObserver implements SplObserver
+class ConcreateObserver implements \SplObserver
 {
-    public function update(SplSubject $subject)
+    public function update(\SplSubject $subject)
     {
         echo $subject->getData(),'<br />';
     }

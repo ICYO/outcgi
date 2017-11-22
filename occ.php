@@ -62,4 +62,4 @@ $subject->attach($client2);
 $subject->attach($client3);
 
 print_r($subject->Observers);
-// $subject->notify();  // 发送消息
+$subject->notify();  // 发送消息

@@ -32,9 +32,9 @@ class ConcreateSubject implements \SplSubject
 
     public function notify()
     {
-        foreach($this->Observers as $objserver)
+        foreach($this->Observers as $osv)
         {
-            $observer->update($this);
+            $osv->update($this);
         }
     }
 

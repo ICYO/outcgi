@@ -48,12 +48,11 @@ class ConcreateObserver implements \SplObserver
 }
 
 
-$subject = new ConcreateSubject();
-
 $client1 = new ConcreateObserver();
 $client2 = new ConcreateObserver();
 $client3 = new ConcreateObserver();
 
+$subject = new ConcreateSubject();
 $subject->initObservers();  // 初始化客户端容器
 
 $subject->setData("第一条消息");

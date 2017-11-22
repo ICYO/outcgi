@@ -35,7 +35,7 @@ class ConcreateSubject implements \SplSubject
         foreach($this->Observers as $objserver)
         {
             echo $objserver->aa;
-            // $observer->update($this);
+            $observer->update($this);
         }
     }
 

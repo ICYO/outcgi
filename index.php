@@ -1,3 +1,3 @@
 <?php
 
-system('cd /var/www/html/outcgi/ && sudo git pull origin master');
+system('cd /var/www/html/outcgi/ && git pull origin master');
